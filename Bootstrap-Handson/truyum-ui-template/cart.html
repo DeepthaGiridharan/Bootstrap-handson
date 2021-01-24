@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Add to Cart</title>
+    <style>
+        
+        #Logo {
+            color: white;
+        }
+
+        .material-icons {
+            vertical-align: middle;
+        }
+        
+        .footer {
+            background-color: #FF6347;
+            color: #FFFFFF;
+            height: 50px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        h1,h3{
+            font-weight:normal;
+        }
+
+        #foodprice {
+            color: #FF6347;
+            float: right;
+        }
+        #totalprice {
+            color: #FF6347;
+            float: right;
+            clear:left;
+
+        }
+      #total{
+          font-size:1.5em;
+      }
+      .delete{
+          float:right;
+          clear:left;
+          cursor:pointer;
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color: #FF6347;">
+        <a class="navbar-brand" id="Logo"><i class="material-icons icon-size">local_dining</i> truYum</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="menu-item-list-customer.html" style="color: #ffffff;">Menu Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html" style="color: #ffffff;">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+       <div class="d-flex">
+            
+            <ul class="list-group col-md-4 mx-auto justify-content-center" id="cartlist">
+                <h1>Cart</h1>
+                <li class="list-group-item text-muted">
+                    Burger<small id="foodprice">129.00</small><div><i class="material-icons icon-size delete" id="deleteburger" onclick="deletemenu(this.id)">delete_forever</i></div>
+                </li>
+                <li class="list-group-item text-muted" >Sandwich<small id="foodprice">99.00</small><div><i class="material-icons icon-size delete" id="deletesandwich" onclick="deletemenu(this.id)">delete_forever</i></div></li>
+                <li class="list-group-item" id="totalrow"><span id="total">Total</span><small id="totalprice">Rs.288.00</small></li>
+
+            </ul>
+        </div>
+
+    </div>
+    <div class="footer">
+        <p>Copyright 2019</p>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+    function deletemenu(clicked_id) {
+       
+        var item = document.getElementById(clicked_id);
+        var removeitem = item.parentNode.parentNode;
+        var total = document.getElementById("totalrow");
+        
+        if(document.getElementById('cartlist').getElementsByTagName('li').length > 2) {
+            alert("Item is deleted from the Cart successfully.");
+                removeitem.remove();
+                
+         }
+        else if (document.getElementById('cartlist').getElementsByTagName('li').length == 2) {
+            alert("Item is deleted from the Cart successfully.");
+            removeitem.remove();
+            total.remove();
+            window.location.href = "cart-empty.html";
+        }
+
+
+
+    }
+</script>
+</body>
+</html>

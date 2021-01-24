@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        #Logo {
+            color: white;
+        }
+
+        .material-icons {
+            vertical-align: middle;
+        }
+
+        .footer {
+            background-color: #FF6347;
+            color: #FFFFFF;
+            height: 50px;
+            left: 0;
+            bottom: 0;
+            position:fixed;
+            width: 100%;
+        }
+
+        #search {
+            background-image: url("https://mocah.org/thumbs/5394508-food-bowl-table-fruit-breakfast-bread-healthy-orange-juice-spoon-kiwi-blackberry-banana-strawberry-orange-grape-looking-down-flat-lay-avocado-juice-vegan-free-pictures.jpg");
+            background-repeat: repeat-x;
+            color: white;
+            font-weight: normal;
+            height: 230px;
+        }
+
+        .col-auto {
+            margin: auto;
+            padding-top: 50px;
+        }
+
+        .card-deck {
+            padding-top: 30px;
+        }
+
+        .card {
+            max-width: 18rem;
+        }
+
+        #price {
+            color: #FF6347;
+            float: right;
+        }
+
+        #delivery {
+            color: blue;
+            float: right;
+            font-size: 1.5rem;
+        }
+
+        #edit {
+            background-color: #FF6347;
+            float: right;
+            border: none;
+            
+        }
+
+        #deliverycharge {
+            font-size: 0.75rem;
+            vertical-align: top;
+        }
+        #date{
+            float:left;
+        }
+        #launchdate{
+            float:left;
+           clear:left;
+        }
+    </style>
+    <title>Menu-List-Admin</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color: #FF6347;">
+        <a class="navbar-brand" id="Logo"><i class="material-icons icon-size">local_dining</i> truYum</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="menu-item-list-admin.html" style="color: #ffffff;">Menu Items</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid" id="search">
+        <div class="col-auto">
+            <h1>Find Food</h1>
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="material-icons icon-size">local_cafe</i></div>
+                </div>
+                <input type="text" class="form-control" id="findfood" placeholder="Search food">
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container-fluid" id="menulist">
+        <div class="card-deck">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1053&q=80" class="card-img-top" alt="sandwich">
+                <div class="card-body">
+                    <h5 class="card-title text-muted">Sandwich <span id="price">₹99</span></h5>
+                    <p class="card-text"><span class="badge badge-success">Active</span><span><small class="text-muted"> Main Course</small><i class="material-icons icon-size" id="delivery">local_shipping <span class="badge badge-primary" id="deliverycharge">FREE</span></i></span></p>
+                    <p class="card-text">
+                        <small class="text-muted" id="date"><i class="material-icons icon-size">access_time</i> Launch</small>
+
+                        <a href="edit-menu-item.html" type="button" class="btn btn-primary" id="edit" onclick="document.location='edit-menu-item.html'"><i class="material-icons icon-size">create</i>Edit</a>
+                        
+                    </p>
+                   <p><small class="text-muted" id="launchdate">15/03/2017</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="burger">
+                <div class="card-body">
+                    <h5 class="card-title text-muted">Burger <span id="price">₹129</span></h5>
+                    <p class="card-text"><span class="badge badge-success">Active</span><span><small class="text-muted"> Main Course</small></span></p>
+                    <p class="card-text">
+                        <small class="text-muted" id="date"><i class="material-icons icon-size">access_time</i> Launch</small>
+                        <a href="edit-menu-item.html" type="button" class="btn btn-primary" onclick="document.location='edit-menu-item.html'" id="edit"><i class="material-icons icon-size">create</i>Edit</a>
+                    </p>
+                    <p><small class="text-muted" id="launchdate">23/12/2017</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80" class="card-img-top" alt="pizza">
+                <div class="card-body">
+                    <h5 class="card-title text-muted">Pizza <span id="price">₹149</span></h5>
+                    <p class="card-text"><span class="badge badge-success">Active</span><span><small class="text-muted"> Main Course</small></span></p>
+                    <p class="card-text">
+                        <small class="text-muted" id="date"><i class="material-icons icon-size">access_time</i> Launch</small>
+                        <a href="edit-menu-item.html" type="button" class="btn btn-primary" id="edit"><i class="material-icons icon-size">create</i>Edit</a>
+                    </p>
+                    <p><small class="text-muted" id="launchdate">21/08/2017</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1526230427044-d092040d48dc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="frenchfries">
+                <div class="card-body">
+                    <h5 class="card-title text-muted">French Fries <span id="price">₹57</span></h5>
+                    <p class="card-text"><span class="badge badge-danger">Inactive</span><span><small class="text-muted"> Starter</small><i class="material-icons icon-size" id="delivery">local_shipping <span class="badge badge-primary" id="deliverycharge">FREE</span></i></span></p>
+                    <p class="card-text">
+                        <small class="text-muted" id="date"><i class="material-icons icon-size">access_time</i> Launch</small>
+                        <a href="edit-menu-item.html" type="button" class="btn btn-primary" onclick="document.location='edit-menu-item.html'" id="edit"><i class="material-icons icon-size">create</i>Edit</a>
+                    </p>
+                    <p><small class="text-muted" id="launchdate">02/07/2017</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck">
+            <div class="card">
+                <img src="https://c0.anyrgb.com/images/699/216/baked-pastries-biscuit-cookie-food-brownie-chocolate-dessert-fudge-fruit-pineapple.jpg" class="card-img-top" alt="brownie">
+                <div class="card-body">
+                    <h5 class="card-title text-muted">Chocolate Brownie <span id="price">₹32</span></h5>
+                    <p class="card-text"><span class="badge badge-success">Active</span><span><small class="text-muted"> Dessert</small><i class="material-icons icon-size" id="delivery">local_shipping <span class="badge badge-primary" id="deliverycharge">FREE</span></i></span></p>
+                    <p class="card-text">
+                        <small class="text-muted" id="date"><i class="material-icons icon-size">access_time</i> Launch</small>
+                        <a href="edit-menu-item.html" type="button" class="btn btn-primary" onclick="document.location='edit-menu-item.html'" id="edit"><i class="material-icons icon-size">create</i>Edit</a>
+                    </p>
+                    <p><small class="text-muted" id="launchdate">02/11/2034</small></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Copyright 2019</p>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
